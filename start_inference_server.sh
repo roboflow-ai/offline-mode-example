@@ -6,7 +6,7 @@ YOUR_VERSION=$4
 YOUR_API_KEY=$5
 
 #pull from local registry
-docker pull $DOCKER_REGISTRY_IP:5000/inference-server:cpu
+sudo docker pull $DOCKER_REGISTRY_IP:5000/inference-server:cpu
 
 #make docker volume for cache
 sudo docker volume create roboflow
