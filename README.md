@@ -1,4 +1,4 @@
-# Guide for Setting Up Docker Registry - License Server
+# Setting Up Docker Registry - License Server
 
 https://docs.docker.com/registry/
 
@@ -10,17 +10,17 @@ Then gather the Roboflow image - example here as if we are running the local reg
     sudo docker push localhost:5000/inference-server:cpu
 ``` 
 
-# Guide for Setting up Roboflow License Server - License Server
+# Setting up Roboflow License Server - License Server
 
 https://docs.roboflow.com/inference/enterprise#using-the-license-server
 
 # Set up Script for Roboflow Inference Server - DMZ
 
-The deployment script assumes that the local license server and docker registry are up <License Server IP> <Docker Registry IP> on ports 8080 and 5000, respectively.
+`./setup_inference_server <License Server IP>  <Docker Registry IP> <Your Project> <Your Version> <Your Roboflow API Key>`
+
+The deployment script assumes that the local license server and docker registry are up <License Server IP> <Docker Registry IP> on ports `8080` and `5000`, respectively.
 
 The deployment script starts the inference server and tests it on an example image - replace `example.jpg` with a test image of your choosing.
-
-`./setup_inference_server <License Server IP>  <Docker Registry IP> <Your Project> <Your Version> <Your Roboflow API Key>`
 
 If successful, you will see an example inference like the following: 
 
